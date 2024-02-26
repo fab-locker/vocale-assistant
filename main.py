@@ -57,11 +57,9 @@ def run():
         if ("google chrome") in action:
             os.system("start chrome")
             talk("I open chrome")
-            speak.runAndWait()
-        elif ("notepad") in action:
+        elif ("note pad") in action or ("notepad") in action:
             os.system("notepad")
             talk("I'm opening the notepad")
-            speak.runAndWait()
         elif ("chat") in action:
             asyncio.run(ask_bing())
         elif ("stop") in action:
