@@ -49,24 +49,23 @@ async def ask_bing():
 
 
 def run():
-    speak.say("Hello, how can I help ?")
+    talk("Hello, how can I help ?")
     print("Hello, how can I help ?")
     while True:
         action = command()
         print(action)
         if ("google chrome") in action:
             os.system("start chrome")
-            speak.say("I open chrome")
+            talk("I open chrome")
             speak.runAndWait()
         elif ("notepad") in action:
             os.system("notepad")
-            speak.say("I'm opening the notepad")
+            talk("I'm opening the notepad")
             speak.runAndWait()
         elif ("chat") in action:
             asyncio.run(ask_bing())
         elif ("stop") in action:
-            speak.say("Good bye")
-            speak.runAndWait()
+            talk("Good bye")
             exit()
         else:
             print("I did not understand")
